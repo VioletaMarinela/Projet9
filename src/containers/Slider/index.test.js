@@ -40,5 +40,6 @@ describe("When slider is created", () => {
     await screen.findByText(
       "Oeuvre à la coopération entre le secteur public et le privé."
     );
+    screen.debug();
   });
 });

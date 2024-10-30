@@ -2,7 +2,7 @@
     "events": [
         {
             "id": 1,
-            "type": "conférence",
+            "type": "Conférence",
             "date": "2022-04-29T20:28:45.744Z",
             "title": "User&product MixUsers",
             "cover": "/images/alexandre-pellaes-6vAjp0pscX0-unsplash.png",
@@ -17,7 +17,7 @@
         },
         {
             "id": 2,
-            "type": "expérience digitale",
+            "type": "Expérience Digitale",
             "date": "2022-01-29T20:28:45.744Z",
             "title": "#DigitonPARIS",
             "cover": "/images/charlesdeluvio-wn7dOzUh3Rs-unsplash.png",
@@ -32,7 +32,7 @@
         },
         {
             "id": 3,
-            "type": "conférence",
+            "type": "Conférence",
             "date": "2022-03-29T20:28:45.744Z",
             "title": "Conférence &co-responsable",
             "cover": "/images/chuttersnap-Q_KdjKxntH8-unsplash.png",
@@ -47,7 +47,7 @@
         },
         {
             "id": 4,
-            "type": "conférence",
+            "type": "Conférence",
             "date": "2022-08-29T20:28:45.744Z",
             "title": "Conférence #productCON",
             "cover": "/images/headway-F2KRf_QfCqw-unsplash.png",
@@ -63,7 +63,7 @@
         },
         {
             "id": 5,
-            "type": "expérience digitale",
+            "type": "Expérience Digitale",
             "date": "2022-04-29T20:28:45.744Z",
             "title": "Conférence #productCON",
             "cover": "/images/pablo-heimplatz-ZODcBkEohk8-unsplash.png",
@@ -79,7 +79,7 @@
         },
         {
             "id": 6,
-            "type": "conférence",
+            "type": "Conférence",
             "date": "2022-04-29T20:28:45.744Z",
             "title": "Conférence #productCON",
             "cover": "/images/priscilla-du-preez-Q7wGvnbuwj0-unsplash1.png",
@@ -95,7 +95,7 @@
         },
         {
             "id": 7,
-            "type": "expérience digitale",
+            "type": "Expérience Digitale",
             "date": "2022-04-29T20:28:45.744Z",
             "title": "Conférence #productCON",
             "cover": "/images/product-school-dJICd7b_LlE-unsplash.png",
@@ -111,7 +111,7 @@
         },
         {
             "id": 8,
-            "type": "conférence",
+            "type": "Conférence",
             "date": "2022-04-29T20:28:45.744Z",
             "title": "Conférence #productCON",
             "cover": "/images/product-school-nOvIa_x_tfo-unsplash.png",
@@ -127,7 +127,7 @@
         },
         {
             "id": 9,
-            "type": "expérience digitale",
+            "type": "Expérience Digitale",
             "date": "2022-04-29T20:28:45.744Z",
             "title": "Conférence #productCON",
             "cover": "/images/stem-list-EVgsAbL51Rk-unsplash.png",
@@ -143,7 +143,7 @@
         },
         {
             "id": 10,
-            "type": "soirée entreprise",
+            "type": "Soirée Entreprise",
             "date": "2022-04-29T20:28:45.744Z",
             "title": "User&product MixUsers",
             "cover": "/images/alexandre-pellaes-6vAjp0pscX0-unsplash.png",
@@ -159,7 +159,7 @@
         },
         {
             "id": 11,
-            "type": "conférence",
+            "type": "Conférence",
             "date": "2022-01-29T20:28:45.744Z",
             "title": "Conférence #productCON",
             "cover": "/images/charlesdeluvio-wn7dOzUh3Rs-unsplash.png",
@@ -175,7 +175,7 @@
         },
         {
             "id": 12,
-            "type": "soirée entreprise",
+            "type": "Soirée Entreprise",
             "date": "2022-03-29T20:28:45.744Z",
             "title": "Mega Event",
             "cover": "/images/chuttersnap-Q_KdjKxntH8-unsplash.png",
@@ -191,7 +191,7 @@
         },
         {
             "id": 13,
-            "type": "conférence",
+            "type": "Conférence",
             "date": "2022-08-29T20:28:45.744Z",
             "title": "Conférence #productCON",
             "cover": "/images/headway-F2KRf_QfCqw-unsplash.png",
@@ -207,7 +207,7 @@
         },
         {
             "id": 14,
-            "type": "conférence",
+            "type": "Conférence",
             "date": "2022-04-29T20:28:45.744Z",
             "title": "Conférence #productCON",
             "cover": "/images/pablo-heimplatz-ZODcBkEohk8-unsplash.png",
@@ -223,7 +223,7 @@
         },
         {
             "id": 15,
-            "type": "soirée entreprise",
+            "type": "Soirée Entreprise",
             "date": "2022-04-29T20:28:45.744Z",
             "title": "Conférence #productCON",
             "cover": "/images/priscilla-du-preez-Q7wGvnbuwj0-unsplash1.png",
@@ -237,9 +237,9 @@
                 "1 site web dédié"
             ]
         },
-        { 
+        {
             "id": 16,
-            "type": "conférence",
+            "type": "Conférence",
             "date": "2022-04-29T20:28:45.744Z",
             "title": "Conférence #productCON",
             "cover": "/images/product-school-dJICd7b_LlE-unsplash.png",
@@ -255,7 +255,7 @@
         },
         {
             "id": 17,
-            "type": "conférence",
+            "type": "Conférence",
             "date": "2022-04-29T20:28:45.744Z",
             "title": "Conférence #productCON",
             "cover": "/images/product-school-nOvIa_x_tfo-unsplash.png",
@@ -271,7 +271,7 @@
         },
         {
             "id": 18,
-            "type": "soirée entreprise",
+            "type": "Soirée Entreprise",
             "date": "2022-04-29T20:28:45.744Z",
             "title": "Conférence #productCON",
             "cover": "/images/stem-list-EVgsAbL51Rk-unsplash.png",
