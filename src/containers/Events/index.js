@@ -25,6 +25,10 @@ const EventList = () => {
   const pageNumber = Math.ceil((data?.events.length || 0) / PER_PAGE);
   const typeList = new Set(data?.events.map(event => event.type));
 
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
     <>
       {error && <div>An error occurred</div>}
@@ -54,7 +58,9 @@ const EventList = () => {
           </div>
           <div className="Pagination">
             {[...Array(pageNumber)].map((_, n) => (
-              <a key={`page-${n + 1}`} href="#events" onClick={() => setCurrentPage(n + 1)}>
+              <a key={`page-${n + 1}`} href="#events" onClick={() => handlePageChange(n + 1)}
+                className={currentPage === n + 1 ? "active" : ""}
+              >
                 {n + 1}
               </a>
             ))}

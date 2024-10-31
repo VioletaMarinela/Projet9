@@ -1,3 +1,13 @@
 .SelectTitle {
   color: white;
 }
+
+.Pagination a {
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.Pagination a.active {
+  font-weight: bold;
+  color: red;
+}
