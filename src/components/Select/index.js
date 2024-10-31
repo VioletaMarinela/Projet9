@@ -13,12 +13,12 @@ const Select = ({
   label,
   type = "normal",
 }) => {
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(selection[0] || null);
   const [collapsed, setCollapsed] = useState(true);
   const changeValue = (newValue) => {
-    onChange();
     setValue(newValue);
-    setCollapsed(newValue);
+    setCollapsed(true);
+    onChange(newValue);
   };
   return (
     <div className={`SelectContainer ${type}`} data-testid="select-testid">

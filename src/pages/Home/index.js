@@ -104,14 +104,19 @@ const Page = () => {
       <footer className="row">
         <div className="col presta">
           <h3>Notre derniére prestation</h3>
-          <EventCard
-            imageSrc={last?.cover}
-            title={last?.title}
-            date={new Date(last?.date)}
-            small
-            label="boom"
-          />
+          {last ? (
+            <EventCard
+              imageSrc={last?.cover}
+              title={last?.title}
+              date={new Date(last?.date)}
+              small
+              label="boom"
+            />
+          ) : (
+            <div>Aucune prestation récente disponible.</div>
+          )}
         </div>
+
         <div className="col contact">
           <h3>Contactez-nous</h3>
           <address>45 avenue de la République, 75000 Paris</address>
