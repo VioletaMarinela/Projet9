@@ -11,38 +11,36 @@ const EventCard = ({
   label,
   small = false,
   ...props
-}) => {
-  const sanitizedTitle = title.replace(/#/g, '');
-  return (
-    <div
-      data-testid="card-testid"
-      className={`EventCard${small ? " EventCard--small" : ""}`}
-      {...props}
-    >
-      <div className="EventCard__imageContainer">
-        <img data-testid="card-image-testid" src={imageSrc} alt={imageAlt} />
-        <div className="EventCard__label">{label}</div>
-      </div>
-      <div className="EventCard__descriptionContainer">
-        <div className="EventCard__title">{sanitizedTitle}</div>
-        <div className="EventCard__month">{date ? getMonth(date) : 'Date non spécifiée'}</div>
-      </div>
+}) => (
+  <div
+    data-testid="card-testid"
+    className={`EventCard${small ? " EventCard--small" : ""}`}
+    {...props}
+  >
+    <div className="EventCard__imageContainer">
+      <img data-testid="card-image-testid" src={imageSrc} alt={imageAlt} />
+      <div className="EventCard__label">{label}</div>
     </div>
-  );
-};
+    <div className="EventCard__descriptionContainer">
+      <div className="EventCard__title">{title}</div>
+      <div className="EventCard__month">{getMonth(date)}</div>
+    </div>
+  </div>
+);
 
 EventCard.propTypes = {
-  imageSrc: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string,
   imageAlt: PropTypes.string,
-  date: PropTypes.instanceOf(Date),
-  title: PropTypes.string.isRequired,
+  date: PropTypes.instanceOf(Date).isRequired,
+  title: PropTypes.string,
   small: PropTypes.bool,
   label: PropTypes.string.isRequired,
 };
 
 EventCard.defaultProps = {
+  imageSrc: '',
+  title: '',
   imageAlt: "image",
-  date: null,
   small: false,
 }
 

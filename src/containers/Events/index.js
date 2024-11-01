@@ -4,42 +4,55 @@ import Select from "../../components/Select";
 import { useData } from "../../contexts/DataContext";
 import Modal from "../Modal";
 import ModalEvent from "../ModalEvent";
+
 import "./style.css";
 
 const PER_PAGE = 9;
 
 const EventList = () => {
+  // Utilisation du hook useData pour récupérer les données et erreur s'il y en a
   const { data, error } = useData();
-  const [type, setType] = useState(null);
+
+  // Etat local "type" pour filtrer les événements par type
+  const [type, setType] = useState();
+
+  // Etat local "currentPage" pour gérer la pagination
   const [currentPage, setCurrentPage] = useState(1);
 
-  const filteredEvents = (data?.events || [])
-    .filter(event => (type ? event.type === type : true))
-    .filter((event, index) => (currentPage - 1) * PER_PAGE <= index && PER_PAGE * currentPage > index);
+  // Filtrage des événements en fonction du type sélectionné et de la pagination
+  const filteredEvents = (
+    (!type ? data?.events : data?.events.filter((event) => event.type === type)) || []
+  ).filter((event, index) => {
+    if (
+      (currentPage - 1) * PER_PAGE <= index &&
+      PER_PAGE * currentPage > index
+    ) {
+      return true;
+    }
+    return false;
+  });
 
+  // Fonction pour changer le type de filtrage des événements
   const changeType = (evtType) => {
     setCurrentPage(1);
-    setType(evtType || null);
+    setType(evtType);
   };
 
-  const pageNumber = Math.ceil((data?.events.length || 0) / PER_PAGE);
-  const typeList = new Set(data?.events.map(event => event.type));
+  const pageNumber = Math.floor((filteredEvents?.length || 0) / PER_PAGE) + 1;
 
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
+  const typeList = new Set(data?.events.map((event) => event.type));
 
   return (
     <>
       {error && <div>An error occurred</div>}
       {data === null ? (
-        "Loading"
+        "loading"
       ) : (
         <>
           <h3 className="SelectTitle">Catégories</h3>
           <Select
             selection={Array.from(typeList)}
-            onChange={(value) => changeType(value || null)}
+            onChange={(value) => (value ? changeType(value) : changeType(null))}
           />
           <div id="events" className="ListContainer">
             {filteredEvents.map((event) => (
@@ -57,10 +70,9 @@ const EventList = () => {
             ))}
           </div>
           <div className="Pagination">
-            {[...Array(pageNumber)].map((_, n) => (
-              <a key={`page-${n + 1}`} href="#events" onClick={() => handlePageChange(n + 1)}
-                className={currentPage === n + 1 ? "active" : ""}
-              >
+            {[...Array(pageNumber || 0)].map((_, n) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <a key={n} href="#events" onClick={() => setCurrentPage(n + 1)}>
                 {n + 1}
               </a>
             ))}
